@@ -1,0 +1,9 @@
+# Downloaded BCA material and caches (copyrighted / large) - never commit
+raw/
+pdf/
+pdftxt/
+txt/
+web/
+px/
+__pycache__/
+*.pyc

@@ -1,0 +1,560 @@
+[
+ {
+  "trade": "Short Gold",
+  "level": "1225",
+  "open": "2014-12-10",
+  "close": "2015-01-23",
+  "pnl": -5.0,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long S&P 500 / Short WTI",
+  "level": "100",
+  "open": "2013-10-15~",
+  "close": "2015-02-06",
+  "pnl": 126.5,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Long German 10-Year Bunds / Short Japanese 10-Year JGBs",
+  "level": "100",
+  "open": "2013-07-15~",
+  "close": "2015-02-27",
+  "pnl": 13.5,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Long Greek Stocks",
+  "level": "716.38",
+  "open": "2015-01-30",
+  "close": "2015-03-09",
+  "pnl": 15.0,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long Gold",
+  "level": "1235",
+  "open": "2015-02-06",
+  "close": "2015-03-09",
+  "pnl": -5.0,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long US Dollar / Short Japanese Yen",
+  "level": "111.94",
+  "open": "2014-10-31",
+  "close": "2015-04-10",
+  "pnl": 7.5,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long Indian Stocks / Short Indonesian Stocks",
+  "level": "5.29",
+  "open": "2014-10-24",
+  "close": "2015-04-24",
+  "pnl": -5.0,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Underweight Commodity-Market Equities",
+  "level": "100",
+  "open": "2013-11-22",
+  "close": "2015-05-08",
+  "pnl": 19.2,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Long CRB Metals Index / Short Wti Crude Oil",
+  "level": "100",
+  "open": "2015-05-08",
+  "close": "2015-06-05",
+  "pnl": -5.0,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long S&P Dividend Aristocrats / Short NASDAQ",
+  "level": "0.3370",
+  "open": "2014-10-24",
+  "close": "2015-06-05",
+  "pnl": -5.0,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long Global Cyclicals / Short Global Defensives",
+  "level": "100",
+  "open": "2015-05-01",
+  "close": "2015-07-03",
+  "pnl": -5.0,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long China H-Share Index",
+  "level": "11922.56",
+  "open": "2014-05-23",
+  "close": "2015-07-03",
+  "pnl": 50.0,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Short China A- Share Index / Long China H-Share Index",
+  "level": "100",
+  "open": "2015-06-06",
+  "close": "2015-07-03",
+  "pnl": 26.4,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Long Italian 10-Year Gov\u2019t Bonds",
+  "level": "5.878%",
+  "open": "2012-08-10",
+  "close": "2015-07-17",
+  "pnl": 30.5,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Long Euro Area Bank Stocks",
+  "level": "50.12",
+  "open": "2015-01-16",
+  "close": "2015-09-24",
+  "pnl": 5.9,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long 30-Year US Treasurys / Short S&P 500",
+  "level": "100",
+  "open": "2015-06-12",
+  "close": "2015-10-02",
+  "pnl": 17.9,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long 12-Month NDF USD/CNY",
+  "level": "6.4025",
+  "open": "2015-03-06",
+  "close": "2015-10-02",
+  "pnl": 2.5,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long 2.1 Unit Of US Barclays High Yield Corporate Bond Index / Short One Unit Of S&P 500",
+  "level": "100",
+  "open": "2015-10-22",
+  "close": "2015-11-26",
+  "pnl": -5.0,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Short NASDAQ 100 Mar 2016 Futures",
+  "level": "4,692.50",
+  "open": "2015-11-06",
+  "close": "2016-01-20",
+  "pnl": 16.2,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long Chinese A-Shares And H-Shares",
+  "level": "100",
+  "open": "2015-07-01",
+  "close": "2016-05-19",
+  "pnl": -27.0,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Short Euro / Long Japanese Yen",
+  "level": "139.15",
+  "open": "2015-06-01",
+  "close": "2016-06-16",
+  "pnl": 19.4,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Short European Equities (US Dollar Terms)",
+  "level": "100",
+  "open": "2016-06-09",
+  "close": "2016-06-24",
+  "pnl": 8.2,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long US 30-Year / Short US 10-Year Gov\u2019t Bonds",
+  "level": "96 BPS",
+  "open": "2014-02-07",
+  "close": "2016-07-08",
+  "pnl": 22.5,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Short British Pound / Long Swedish Krona",
+  "level": "13.16",
+  "open": "2015-11-12",
+  "close": "2016-08-11",
+  "pnl": 19.1,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long 10-Year US Treasurys / Short 10-Year German Bunds",
+  "level": "100",
+  "open": "2014-08-15",
+  "close": "2016-10-27",
+  "pnl": 18.5,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long Spanish 10-Year Gov\u2019t Bonds / Short Italian 10-Year Gov\u2019t Bonds",
+  "level": "16 BPS",
+  "open": "2015-10-15",
+  "close": "2016-12-08",
+  "pnl": 6.2,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long Chinese Bank Equities",
+  "level": "100",
+  "open": "2016-05-19",
+  "close": "2017-01-19",
+  "pnl": 32.3,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Short US Dollar / Long Russian Ruble",
+  "level": "64.59",
+  "open": "2015-11-19",
+  "close": "2017-01-19",
+  "pnl": 20.1,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Short NASDAQ 100 Mar 2017 Futures",
+  "level": "4820.50",
+  "open": "2016-08-23",
+  "close": "2017-02-23",
+  "pnl": -10.0,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Short US / Long Basket Of Euro Area, Japanese, And Chinese Equities",
+  "level": "100",
+  "open": "2015-02-06",
+  "close": "2017-02-23",
+  "pnl": -10.0,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Short S&P 500",
+  "level": "2389.52",
+  "open": "2017-05-04",
+  "close": "2017-06-15",
+  "pnl": -2.0,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Short Euro / Long US Dollar",
+  "level": "1.1205",
+  "open": "2017-05-25",
+  "close": "2017-06-29",
+  "pnl": -1.6,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Short Japanese, German And Swiss 10-Year Gov\u2019t Bonds",
+  "level": "100",
+  "open": "2016-07-05",
+  "close": "2017-06-29",
+  "pnl": 5.3,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Short Fed Funds Jan 2018 Futures",
+  "level": "98.79",
+  "open": "2017-04-20",
+  "close": "2017-07-06",
+  "pnl": 11.0,
+  "unit": "bps",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Overweight Australia (Add Currency Hedge)",
+  "level": "100",
+  "open": "2009-01-23",
+  "close": "2017-07-20",
+  "pnl": 59.5,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Overweight New Zealand (Add Currency Hedge)",
+  "level": "100",
+  "open": "2009-01-23",
+  "close": "2017-07-20",
+  "pnl": 74.2,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Long British Pound / Short Japanese Yen",
+  "level": "132.01",
+  "open": "2016-08-11",
+  "close": "2017-08-03",
+  "pnl": 9.9,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Short Fed Funds Jun 2018 Futures",
+  "level": "98.55",
+  "open": "2017-07-06",
+  "close": "2017-09-07",
+  "pnl": -18.0,
+  "unit": "bps",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long Brent Oil Dec 2017 Futures",
+  "level": "49.33",
+  "open": "2017-05-04",
+  "close": "2017-09-21",
+  "pnl": 13.8,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Short S&P 500",
+  "level": "2585.64",
+  "open": "2017-11-16",
+  "close": "2017-11-30",
+  "pnl": -2.0,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long 2-Year USD/ Saudi Riyal Forward Contract",
+  "level": "3.89",
+  "open": "2015-12-10",
+  "close": "2018-01-11",
+  "pnl": -2.9,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Long Global Industrial Stocks / Short Global Utilities",
+  "level": "100",
+  "open": "2017-09-29",
+  "close": "2018-02-01",
+  "pnl": 12.0,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long Australian Dollar / Short New Zealand Dollar",
+  "level": "1.0815",
+  "open": "2014-04-25",
+  "close": "2018-02-01",
+  "pnl": -1.8,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Short One Unit Of EUR/USD & Long 1.5 Units Of 30-Year US Treasurys Versus 30-Year German Bunds",
+  "level": "100",
+  "open": "2018-01-25",
+  "close": "2018-02-06",
+  "pnl": -2.5,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Short Fed Funds Dec 2018 Futures",
+  "level": "98.6500",
+  "open": "2017-09-07",
+  "close": "2018-02-06",
+  "pnl": 70.0,
+  "unit": "bps",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long S&P 500 / Short US Barclays High Yield Corporate Bond Index",
+  "level": "100",
+  "open": "2018-01-11",
+  "close": "2018-02-15",
+  "pnl": -5.0,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Short US 30-Year Government Bond",
+  "level": "100",
+  "open": "2017-06-29",
+  "close": "2018-03-01",
+  "pnl": 3.8,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Long Europe And Japan / Short US Equities",
+  "level": "100",
+  "open": "2017-02-23",
+  "close": "2018-06-19",
+  "pnl": -5.4,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Long Swedish Krona / Short Swiss Franc",
+  "level": "0.1156",
+  "open": "2017-07-16",
+  "close": "2018-08-15",
+  "pnl": -6.3,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Short Australian Dollar / Long Japanese Yen",
+  "level": "87.9580",
+  "open": "2018-02-01",
+  "close": "2019-01-07",
+  "pnl": 10.0,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Short Fed Funds December 2020 Futures",
+  "level": "100",
+  "open": "2018-09-20",
+  "close": "2019-03-25",
+  "pnl": -75.0,
+  "unit": "bps",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long US Dollar / Short Chinese Yuan",
+  "level": "6.8368",
+  "open": "2018-09-20",
+  "close": "2019-04-18",
+  "pnl": -3.1,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Short Australian Dollar / Long Canadian Dollar",
+  "level": "0.975",
+  "open": "2018-06-28",
+  "close": "2019-04-18",
+  "pnl": 1.6,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Short Euro / Long Russian Ruble",
+  "level": "68.6511",
+  "open": "2017-07-06",
+  "close": "2019-04-18",
+  "pnl": 8.6,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Short Euro / Long Canadian Dollar",
+  "level": "1.5132",
+  "open": "2017-05-18",
+  "close": "2019-04-18",
+  "pnl": 3.9,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Long US Dollar (Dxy Index)",
+  "level": "86.915",
+  "open": "2014-10-31",
+  "close": "2019-04-18",
+  "pnl": 16.4,
+  "unit": "%",
+  "type": "Strategic"
+ },
+ {
+  "trade": "Long Euro Area Bank Equities",
+  "level": "100",
+  "open": "2019-04-25",
+  "close": "2019-05-22",
+  "pnl": -7.0,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Short S&P 500 Index (Target Level: 2650)",
+  "level": "2854",
+  "open": "2019-05-10",
+  "close": "2019-06-20",
+  "pnl": -3.8,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Short Fed Funds June 2021 Futures (In BPS)",
+  "level": "100",
+  "open": "2019-03-28",
+  "close": "2019-06-24",
+  "pnl": -50.0,
+  "unit": "bps",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long Euro / Short Japanese Yen",
+  "level": "125.769",
+  "open": "2019-04-18",
+  "close": "2019-08-01",
+  "pnl": -5.0,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long Euro Area Bank Equities",
+  "level": "88.14",
+  "open": "2019-06-28",
+  "close": "2019-08-13",
+  "pnl": -10.0,
+  "unit": "%",
+  "type": "Tactical"
+ },
+ {
+  "trade": "Long Gold",
+  "level": "1275",
+  "open": "2019-04-17",
+  "close": "2019-08-29",
+  "pnl": 20.5,
+  "unit": "%",
+  "type": "Tactical"
+ }
+]

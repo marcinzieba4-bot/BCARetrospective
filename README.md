@@ -1,0 +1,294 @@
+# BCA Research – Global Investment Strategy (GIS) retrospective
+
+Do the GIS team's trades and macro calls add value? This repo pulls the whole GIS archive available on
+bcaresearch.com, extracts every trade and every View Matrix rating, reprices them against market data, and
+turns them into portfolios.
+
+*Data as of 10 Nov 2026. Market data comes from Yahoo Finance. BCA report text and PDFs are not in this
+repo, only the facts derived from them (trade ledgers, ratings, dates).*
+
+---
+
+## TL;DR: what's worth using
+
+| Use GIS for... | Evidence | Ignore / fade GIS on... | Evidence |
+|---|---|---|---|
+| **Rates / duration direction** (12-month) | Hit rate 76%, rank-IC +0.51. Called the 2020–22 bond bear market | **Regional equity allocation** (anti-US, pro-EM/Europe) | Hit rate 38%, IC −0.23, **−1.2%/yr** as an overlay. SPY beat ACWI by ~30 pp while GIS was underweight the US |
+| **Commodity tilts** (energy, metals, gold) | **+1.9%/yr**, information ratio 0.8. The best overlay | **Recession timing** | 87 dated forecasts, and the date was pushed back every time (2019→2020→2021→2022, then H2-2024→2025). No forecast recession arrived |
+| **Contrarian "no recession" calls** | 2022–23: rejected the consensus recession view, which was correct | **3-month tactical views** | Zero or negative IC in every asset class. Tactical asset allocation lost **0.7%/yr** |
+| **Cheap convex hedges when they're bearish** | Long SPY put: **+536%**, closed 7 Apr 2025, one day before the low | **Underweighting equities on a recession call** | Since the Jun-2024 "Here Comes The Pain" outlook: S&P +38%, ACWI +43% |
+| **Self-reported trade P&L** (it's honest) | 17/18 repriced trades agree in sign. Median gap 1.3 pp | **The headline trade stats** | "Avg 10.2%, cumulative 580%" leaves out the losing open book that was dropped in Apr-2020 |
+
+**Bottom line.** GIS's *rates and commodity* logic carries real signal. Its *equity-region*, *USD* and
+*recession-timing* logic doesn't, and some of it has a consistent negative edge you could fade. The trade
+book had real alpha in 2015–2016, which faded to roughly zero from 2018 onward. The newest product
+(FullView Portfolio) was **−0.83 pp behind its benchmark** at the last published update (18 Jun 2026).
+
+---
+
+## 1. What was available (and what wasn't)
+
+* **445 GIS ("CoreMacro → Global") reports, Dec 2015 → Nov 2026.** All are authored by Peter Berezin. 423
+  have PDFs.
+* **Nothing before Dec 2015 is on the current platform.** Site search returns nothing before 2016, and
+  node IDs below the 2016 import block return 404. So **the Chen Zhao era (2008–2015) can't be reviewed
+  directly.** The only view into it is a handful of long-running *strategic* positions opened in 2009–14
+  that were still open in the 2015–16 tables (see §2.4). These are survivors, so they're biased toward
+  winners.
+* GIS published its calls in three different formats over time:
+
+| Period | Format | Extracted |
+|---|---|---|
+| 2015 → Mar 2020 | Tactical Trades, Strategic Recommendations and a **cumulative closed-trade table** with realized P&L | 62 closed trades, plus 15 positions still open at 27 Mar 2020 |
+| Apr 2020 → Dec 2020 | *No trade table.* On 9 Apr 2020 GIS switched to the View Matrix and promised to *"track all the positions in the matrix versus an appropriate market benchmark"*. That scorecard was **never published** | – |
+| Dec 2020 → May 2025 | "Special Trade Recommendations" (open trades only, with return-to-date) | 34 trades. Closing values are the last mark before removal, or BCA's trade-tracker final |
+| Dec 2019 → Jul 2025 | **View Matrix**: 1–5 ratings for ~32 assets at 3-month / 12-month / 10-year horizons. Graphical format from 2024 | 138 numeric and 37 graphical matrices, ≈15,000 ratings |
+| Sep 2025 → 2026 | FullView Portfolio and its overlay trades (website trade tracker) | 55 trades with real dates taken from the comments. The tracker's own start/close dates are placeholders |
+
+---
+
+## 2. The trades
+
+### 2.1 Summary statistics
+
+Returns are per trade, as published (equal weight per trade). Trades quoted in bps are counted in the hit
+rate only.
+
+| Group | n | Hit rate | Mean | Median | Avg win | Avg loss | Profit factor |
+|---|---|---|---|---|---|---|---|
+| 2015–19 closed only (BCA's own table) | 62 | 56.5% | +10.1% | +5.3% | +21.7% | −5.9% | 5.1 |
+| **2015–19 including open book at Mar-2020 marks** | 77 | **50.6%** | **+7.7%** | **+2.5%** | +20.5% | −7.1% | 3.4 |
+| of which Tactical | 41 | 46% | +3.9% | −1.8% | +13.8% | −4.9% | 2.5 |
+| of which Strategic (multi-year) | 36 | 56% | +11.8% | +4.2% | +26.1% | −10.2% | 3.9 |
+| 2015–19 FX | 21 | **67%** | +10.4% | +3.9% | | | **6.8** |
+| 2015–19 Rates/credit | 20 | 50% | +8.6% | +5.8% | | | 5.0 |
+| 2015–19 Equities | 30 | **40%** | +2.2% | −2.2% | | | 1.4 |
+| 2020–25 Special trades | 34 | 41% | +14.7% | −5.0% | | | 3.5 |
+| 2020–25 excluding the SPY put | 31 | 42% | **−2.2%** | −5.0% | | | |
+| 2025–26 FullView-era overlays | 55 | 51% | −1.6% | +0.1% | +6.5% | −10.1% | **0.67** |
+
+**What this shows:**
+
+* **Stop discipline is real.** Losses cluster at exactly −5% or −10%. The positive mean comes from a few
+  large winners: Long S&P/Short WTI +126.5%, H-shares +50%, Aus/NZ bonds +60–74%, the SPY put +536%.
+* **Survivorship in the headline.** Fifteen strategic positions were still open on 27 Mar 2020, most of
+  them losing: Value/Growth −20.1%, EM −13.0%, Autos −13.4%, RUB −16.6%, TIPS breakevens −12.3%,
+  Eurodollar −127 bps, CPI swaps −54/−65 bps. **They disappeared on 9 Apr 2020 without a reported exit.**
+  Including them cuts the median trade from +5.3% to +2.5%.
+* **"Cumulative return 580%"** compounds every trade as if each one used 100% of capital in sequence. It
+  isn't a portfolio return.
+
+### 2.2 Are BCA's numbers honest? Yes
+
+I repriced 18 trades independently with Yahoo prices (`scripts/verify.py`): **17 of 18 agree in sign,
+with a median absolute gap of 1.3 pp.** The gaps come from FX carry (BCA includes it), futures roll, and
+intraperiod stops. In the one sign mismatch (Long S&P/Short HY, Feb-2018) the stop triggered during
+"Volmageddon" before the market recovered.
+
+### 2.3 A portfolio built from the trades
+
+Construction rule: each trade gets 5% notional, and P&L accrues linearly from open to close. The option
+is sized at 1% of capital in premium.
+
+![Trade book](charts/4_trade_book.png)
+
+| | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Overlay P&L, % of capital | +6.7 | +5.1 | +1.9 | +0.4 | −1.7 | −0.7 | −1.1 | −0.3 | +0.5 | +0.7 |
+| Avg open positions | 13.6 | 12.7 | 11.1 | 12.2 | 12.7 | 2.9 | 3.1 | 7.5 | 4.4 | 5.2 |
+
+**The edge decayed.** About +13.7% came in 2015–17, and most of it was carried by legacy multi-year
+positions. From 2018 to 2024 the overlay totalled about −2%. For the FullView era, BCA's own table shows
+overlay trades contributing **−0.34 pp** from Oct-2025 to Jun-2026.
+
+### 2.4 The pre-2016 legacy positions (the only view of the Zhao-era book)
+
+| Opened | Position | Closed | Result |
+|---|---|---|---|
+| Jan 2009 | Overweight Australia / New Zealand gov't bonds (hedged) | Jul 2017 | +59.5% / +74.2% vs benchmark |
+| Aug 2012 | Long Italian 10-year bonds (at 5.88%) | Jul 2015 | +30.5% |
+| Jul 2013 | Long Bunds / Short JGBs | Feb 2015 | +13.5% |
+| Oct 2013 | Long S&P 500 / Short WTI | Feb 2015 | **+126.5%** |
+| Nov 2013 | Underweight commodity-producer equities | May 2015 | +19.2% |
+| Feb 2014 | US 30y vs 10y flattener | Jul 2016 | +22.5% |
+| May 2014 | Long China H-shares | Jul 2015 | +50.0% |
+| Oct 2014 | Long US dollar (DXY) | Apr 2019 | +16.4% |
+
+These all follow the 2009–14 macro thesis: global disinflation, low yields for longer, a strong dollar and
+a commodity bust. That thesis was right. Only survivors are visible, though, so this isn't a full track
+record for the era.
+
+### 2.5 FullView Portfolio (launched 24 Oct 2025): BCA's own reported scorecard
+
+| Date | vs benchmark (60% equity, 25% TLT, 15% BIL) |
+|---|---|
+| 8 Jan 2026 | +102 bps |
+| 12 Feb 2026 | +171 bps |
+| 26 Feb 2026 | +181 bps |
+| 27 Mar 2026 | +66 bps |
+| **18 Jun 2026** | **−83 bps** (portfolio +8.41% vs benchmark +9.24%; asset allocation −0.49, overlays −0.34) |
+
+The reports stopped mentioning outperformance once the gap turned negative. No later figure appears in the
+GIS reports through Nov 2026. The largest single loss was Long copper / Short oil, **−52% in 10 days**
+(Mar 2026, 1.5% weight).
+
+---
+
+## 3. The macro views (View Matrix, Dec 2019 → Jul 2025)
+
+### 3.1 Do the ratings predict returns?
+
+Each weekly rating (1 = strong underweight … 5 = strong overweight) is compared with the asset's forward
+return relative to its benchmark: 63 trading days for 3-month views and 252 for 12-month views. *IC* is the
+rank correlation between rating and forward return.
+
+| Horizon | Category | Active calls | Hit rate | OW − UW fwd return | IC |
+|---|---|---|---|---|---|
+| 12-month | **Fixed income** (duration, gov't, IG, HY, linkers) | 559 | **68%** | +5.2 pp | **+0.42** |
+| 12-month | **Commodities** | 337 | 58% | +15.1 pp | **+0.25** |
+| 12-month | Equity / bond / cash allocation | 274 | 55% | +5.8 pp | +0.17 |
+| 12-month | Currencies | 1038 | 54% | +0.3 pp | −0.03 |
+| 12-month | **Regional equities** | 932 | **38%** | **−5.3 pp** | **−0.23** |
+| 12-month | Equity sectors (2024–25) | 239 | 39% | −6.9 pp | −0.18 |
+| 3-month | *All categories* | | 38–53% | ≈ 0 or negative | −0.20 … +0.03 |
+
+Single calls at the 12-month horizon:
+**Duration** hit 76% (IC +0.51) · **US equities** hit **19%** (IC −0.54) · **EM equities** hit **16%**
+(IC −0.46) · **USD** hit 37% (IC −0.28) · Gold 54%.
+
+### 3.2 A portfolio built from the matrix
+
+Rules:
+* Asset allocation: 60/40 (ACWI / AGG+BNDX), ±10 pp per rating notch. Cash rating adds T-bills.
+* Overlays: long/short, 5% notional per notch against the benchmark. Duration overlay is 25% per notch in
+  IEF vs BIL.
+* Rebalanced at every report. Each signal applies from the next trading day.
+
+![Matrix overlays](charts/3_matrix_overlays.png)
+
+| Component (12-month views) | Annualized active return | Info ratio | Component (3-month views) | Annualized |
+|---|---|---|---|---|
+| Equity / bond / cash vs 60/40 | +0.23% | 0.13 | Equity / bond / cash | **−0.72%** |
+| Regional equity tilts | **−1.17%** | −0.57 | Regional equity tilts | −1.33% |
+| Duration | +0.36% | 0.22 | Duration | +0.44% |
+| Currencies | +0.03% | 0.02 | Currencies | −0.42% |
+| **Commodities** | **+1.93%** | **0.81** | Commodities | +0.63% |
+| Sectors (2024–25 only) | −1.07% | −0.68 | Sectors | −1.45% |
+
+By asset, the biggest contributors were energy (+0.9%/yr), base metals (+0.7%) and gold (+0.3%). The
+biggest detractors were EM overweight (−0.4%), Euro Area overweight (−0.3%) and the health-care and
+staples sector overweights.
+
+### 3.3 The big narrative calls
+
+![Equity stance](charts/1_equity_stance.png)
+
+| Call | Verdict |
+|---|---|
+| 2016–17 "cyclically bullish" on risk assets | ✅ ACWI +8% (2016), +24% (2017) |
+| **20 Jun 2018: cut equities to neutral ("Three Policy Puts Go Kaput")** | ✅ Ahead of the Q4-2018 sell-off |
+| **19 Dec 2018: back to overweight near the low** | ✅ ACWI +27% in 2019. Their best equity-timing call |
+| 2017–19: "recession in late 2019 … 2020 … 2021 … 2022" | ❌ Timing kept rolling forward. The 2020 recession was the pandemic, not the forecast mechanism |
+| 2020–22: overweight stocks, underweight bonds and duration | ✅ Stocks up in 2020–21 (still overweight into H1-2022). **Bond bear market in 2021–22 caught** |
+| 2020–25: underweight US, overweight EM / Europe | ❌ US kept leading. ~30 pp of underperformance vs ACWI |
+| 2020–23: bearish USD | ⚠️ Right in 2020 and 2023, wrong in 2021–22 (DXY +6%, +8%) |
+| **2022–23: "no recession", against consensus** (kinked-Phillips-curve, immaculate disinflation) | ✅ Correct and contrarian. The best *macro* insight, but equities were only held at neutral in 2023 |
+| 2023–25: "recession in H2-2024" → "late-24/early-25" → "75% in 2025" | ❌ None arrived. Underweight equities from ~Sep 2024; ACWI +40% since |
+| Nov-2024 SPY put as a bearish hedge | ✅ +536%, closed 7 Apr 2025 |
+
+![Recession forecasts](charts/2_recession_forecasts.png)
+
+**The recession-forecasting framework** (labour-market and Phillips-curve logic, "recession starts just as
+everyone declares a soft landing") produced a forecast that was always 12–18 months out, and the date
+moved each year. It's useful as a list of risks. It doesn't work as a timing tool.
+
+---
+
+## 4. How to take advantage of this
+
+1. **Follow GIS on rates and duration (12-month) and on commodity tilts.** Those are where the ratings had
+   positive IC and positive overlay P&L. Use them as inputs to sizing, not as automatic switches.
+2. **Treat GIS regional-equity views (especially "underweight US") as a contrarian or at best neutral
+   signal.** The hit rate was below 20% on US and EM, a structural bias. Don't follow it.
+3. **Don't trade GIS's 3-month tactical calls.** IC was zero or negative in every asset class.
+4. **When GIS turns bearish, buy cheap convexity instead of cutting equity weight.** The SPY put made
+   +536%, while the equity underweight cost about 40 pp of upside.
+5. **Read their "no recession" calls more closely than their "recession coming" calls.** The contrarian
+   soft-landing call in 2022–23 was right. Every dated recession call was wrong on timing.
+6. **Use the trade ideas for idea generation, sized small.** Expect about 50% winners, losses stopped at
+   −5% or −10%, and returns coming from a few fat-tail winners. Most of the edge was in 2015–17.
+7. **Track them yourself.** The FullView table is their only live scorecard; check it in each report. Ask
+   BCA for the matrix scorecard they promised in April 2020.
+
+---
+
+## 5. Method, assumptions and caveats
+
+* **Small sample.** The matrix test covers 5.6 years. Weekly observations overlap heavily, so there are
+  only about 5–6 independent 12-month windows per asset. A few regimes dominate the results (2022 rates,
+  2021–22 energy, US tech leadership). Treat the ICs as directional evidence, not statistical proof.
+* **Proxies:**
+  * Equities: ACWI, SPY, EZU, EWU, EWC, EWA, EWJ, EEM.
+  * Global aggregate (hedged): 50/50 AGG + BNDX.
+  * Fixed-income sectors: GOVT, LQD, HYG, TIP vs AGG/IEF.
+  * Duration: IEF vs BIL.
+  * Currencies (trade-weighted): each G7 currency vs an equal-weight basket of the other six. EM
+    currencies: CEW.
+  * Commodities: Brent front-month (roll ignored), DBB, GLD.
+  * Sectors: iShares global sector ETFs vs ACWI.
+* **Trade sizing:**
+  * 5% notional per trade, linear P&L accrual over the holding period.
+  * Bps-quoted trades (Fed funds, Eurodollar, CPI swaps) count toward hit rates but not toward % P&L. Net
+    they were −362 bps across ten trades.
+* **Closing values:**
+  * 2020–25 special trades close at their last published mark, or at the final value on BCA's trade
+    tracker.
+  * Open positions dropped in April 2020 are valued at their 27 Mar 2020 marks, which was close to the
+    COVID low.
+* **Equity stance before 2020** (chart 1) is reconstructed from report text, so its dates are approximate.
+  From 2020 the stance comes from the matrix.
+* **Graphical matrix (2024–25):** read from the filled squares in the PDF vector graphics. Validated
+  visually on sample pages.
+* **Numeric matrix:** struck-through old ratings are detected and dropped. 0 ambiguous cells.
+
+---
+
+## 6. Reproducing
+
+```bash
+pip install -r requirements.txt
+```
+
+Set `BCA_USER` (your BCA login email) and `BCA_Pass` in the environment. Then run from a working
+directory. Downloads go to `raw/`, `pdf/`, `pdftxt/`, `txt/`, `web/` and `px/`; these are git-ignored and
+must never be committed.
+
+```bash
+python scripts/bca_login.py web/cookies.pkl          # Auth0 + SAML login, saves session cookies
+python scripts/list_reports.py '{"platform_category":"216976","platform_strategist":"291"}' web/berezin_global.json
+python scripts/download.py web/berezin_global.json raw   # report HTML
+python scripts/pdf_dl.py web/berezin_global.json pdf     # report PDFs (trade tables / matrices live here)
+python scripts/build_index.py                            # PDF->text, HTML->text, index
+python scripts/parse_ledger.py pdftxt/166486.json 27,28 data/closed_2015_2019.json
+python scripts/lifecycle.py                              # every open-position snapshot 2016-2025
+python scripts/parse_vm.py web/vm_reports.json data/vm_numeric_raw.json
+python scripts/parse_vm_graph.py web/vm_graph_reports.json data/vm_graph_raw.json
+python scripts/vm_timeline.py && python scripts/build_trades.py
+python scripts/trade_stats.py && python scripts/trade_portfolio.py && python scripts/verify.py
+python scripts/vm_eval.py && python scripts/vm_portfolio.py
+python scripts/recession_calls.py && python scripts/charts.py
+```
+
+### Data files (`data/`)
+
+| File | Content |
+|---|---|
+| `closed_2015_2019.json` | 62 closed trades with BCA-reported realized P&L |
+| `lifecycle.json` | Every trade position seen in any weekly table, with its return-to-date path |
+| `all_trades.csv` | Unified ledger (166 trades, all eras), used for all trade statistics |
+| `website_trades_berezin.json` | BCA trade-tracker rows for Berezin (facts only, commentary removed) |
+| `vm_ratings_long.csv` | Every View Matrix rating: date × asset × horizon |
+| `vm_eval_obs.csv` | Ratings joined to forward relative returns |
+| `vm_portfolio_curves.csv` | Daily returns of the matrix-based portfolios |
+| `recession_calls.csv` | 87 dated recession-timing statements and the implied start date |
+| `report_index.json` | All 445 reports: date, slug, which PDF pages hold trade tables |
