@@ -1,0 +1,712 @@
+[
+{
+"id": "EQ:US|2020-01-17",
+"name": "EQ:US",
+"start": "2020-01-17",
+"end": "2024-02-09",
+"legs": {
+"SPY": -1.0,
+"ACWI": 1.0
+},
+"sign": -1
+},
+{
+"id": "EQ:US|2024-02-09",
+"name": "EQ:US",
+"start": "2024-02-09",
+"end": "2025-04-10",
+"legs": {
+"SPY": 1.0,
+"ACWI": -1.0
+},
+"sign": 1
+},
+{
+"id": "EQ:Euro Area|2020-01-10",
+"name": "EQ:Euro Area",
+"start": "2020-01-10",
+"end": "2024-02-09",
+"legs": {
+"EZU": 1.0,
+"ACWI": -1.0
+},
+"sign": 1
+},
+{
+"id": "EQ:Euro Area|2024-12-13",
+"name": "EQ:Euro Area",
+"start": "2024-12-13",
+"end": "2025-04-10",
+"legs": {
+"EZU": -1.0,
+"ACWI": 1.0
+},
+"sign": -1
+},
+{
+"id": "EQ:UK|2020-01-17",
+"name": "EQ:UK",
+"start": "2020-01-17",
+"end": "2024-02-09",
+"legs": {
+"EWU": 1.0,
+"ACWI": -1.0
+},
+"sign": 1
+},
+{
+"id": "EQ:UK|2024-02-09",
+"name": "EQ:UK",
+"start": "2024-02-09",
+"end": "2024-12-13",
+"legs": {
+"EWU": -1.0,
+"ACWI": 1.0
+},
+"sign": -1
+},
+{
+"id": "EQ:Canada|2020-01-17",
+"name": "EQ:Canada",
+"start": "2020-01-17",
+"end": "2024-02-09",
+"legs": {
+"EWC": 1.0,
+"ACWI": -1.0
+},
+"sign": 1
+},
+{
+"id": "EQ:Canada|2024-02-09",
+"name": "EQ:Canada",
+"start": "2024-02-09",
+"end": "2025-04-10",
+"legs": {
+"EWC": -1.0,
+"ACWI": 1.0
+},
+"sign": -1
+},
+{
+"id": "EQ:Australia|2020-01-17",
+"name": "EQ:Australia",
+"start": "2020-01-17",
+"end": "2024-02-09",
+"legs": {
+"EWA": 1.0,
+"ACWI": -1.0
+},
+"sign": 1
+},
+{
+"id": "EQ:Australia|2024-02-09",
+"name": "EQ:Australia",
+"start": "2024-02-09",
+"end": "2025-04-10",
+"legs": {
+"EWA": -1.0,
+"ACWI": 1.0
+},
+"sign": -1
+},
+{
+"id": "EQ:Japan|2021-01-08",
+"name": "EQ:Japan",
+"start": "2021-01-08",
+"end": "2024-02-09",
+"legs": {
+"EWJ": 1.0,
+"ACWI": -1.0
+},
+"sign": 1
+},
+{
+"id": "EQ:EM|2020-01-10",
+"name": "EQ:EM",
+"start": "2020-01-10",
+"end": "2024-02-09",
+"legs": {
+"EEM": 1.0,
+"ACWI": -1.0
+},
+"sign": 1
+},
+{
+"id": "EQ:EM|2024-12-13",
+"name": "EQ:EM",
+"start": "2024-12-13",
+"end": "2025-04-10",
+"legs": {
+"EEM": -1.0,
+"ACWI": 1.0
+},
+"sign": -1
+},
+{
+"id": "FI:Government|2020-01-17",
+"name": "FI:Government",
+"start": "2020-01-17",
+"end": "2023-03-31",
+"legs": {
+"GOVT": -1.0,
+"AGG": 1.0
+},
+"sign": -1
+},
+{
+"id": "FI:Government|2024-02-09",
+"name": "FI:Government",
+"start": "2024-02-09",
+"end": "2025-08-04",
+"legs": {
+"GOVT": 1.0,
+"AGG": -1.0
+},
+"sign": 1
+},
+{
+"id": "FI:Investment Grade|2020-03-28",
+"name": "FI:Investment Grade",
+"start": "2020-03-28",
+"end": "2021-01-08",
+"legs": {
+"LQD": 1.0,
+"AGG": -1.0
+},
+"sign": 1
+},
+{
+"id": "FI:Investment Grade|2024-02-09",
+"name": "FI:Investment Grade",
+"start": "2024-02-09",
+"end": "2025-08-04",
+"legs": {
+"LQD": -1.0,
+"AGG": 1.0
+},
+"sign": -1
+},
+{
+"id": "FI:High Yield|2020-01-17",
+"name": "FI:High Yield",
+"start": "2020-01-17",
+"end": "2020-03-28",
+"legs": {
+"HYG": 1.0,
+"AGG": -1.0
+},
+"sign": 1
+},
+{
+"id": "FI:High Yield|2020-10-09",
+"name": "FI:High Yield",
+"start": "2020-10-09",
+"end": "2023-03-31",
+"legs": {
+"HYG": 1.0,
+"AGG": -1.0
+},
+"sign": 1
+},
+{
+"id": "FI:High Yield|2024-02-09",
+"name": "FI:High Yield",
+"start": "2024-02-09",
+"end": "2025-08-04",
+"legs": {
+"HYG": -1.0,
+"AGG": 1.0
+},
+"sign": -1
+},
+{
+"id": "FI:Duration|2020-01-17",
+"name": "FI:Duration",
+"start": "2020-01-17",
+"end": "2022-04-02",
+"legs": {
+"IEF": -1.0,
+"BIL": 1.0
+},
+"sign": -1
+},
+{
+"id": "FI:Duration|2022-08-02",
+"name": "FI:Duration",
+"start": "2022-08-02",
+"end": "2022-10-27",
+"legs": {
+"IEF": -1.0,
+"BIL": 1.0
+},
+"sign": -1
+},
+{
+"id": "FI:Duration|2023-05-26",
+"name": "FI:Duration",
+"start": "2023-05-26",
+"end": "2025-08-04",
+"legs": {
+"IEF": 1.0,
+"BIL": -1.0
+},
+"sign": 1
+},
+{
+"id": "FI:Inflation Protection|2020-01-17",
+"name": "FI:Inflation Protection",
+"start": "2020-01-17",
+"end": "2021-06-18",
+"legs": {
+"TIP": 1.0,
+"IEF": -1.0
+},
+"sign": 1
+},
+{
+"id": "FI:Inflation Protection|2022-08-02",
+"name": "FI:Inflation Protection",
+"start": "2022-08-02",
+"end": "2023-03-31",
+"legs": {
+"TIP": 1.0,
+"IEF": -1.0
+},
+"sign": 1
+},
+{
+"id": "FI:Inflation Protection|2024-02-09",
+"name": "FI:Inflation Protection",
+"start": "2024-02-09",
+"end": "2024-05-09",
+"legs": {
+"TIP": 1.0,
+"IEF": -1.0
+},
+"sign": 1
+},
+{
+"id": "FX:USD|2020-01-10",
+"name": "FX:USD",
+"start": "2020-01-10",
+"end": "2023-04-20",
+"legs": {
+"TW_USD": -1.0
+},
+"sign": -1
+},
+{
+"id": "FX:USD|2024-10-10",
+"name": "FX:USD",
+"start": "2024-10-10",
+"end": "2025-04-10",
+"legs": {
+"TW_USD": 1.0
+},
+"sign": 1
+},
+{
+"id": "FX:EUR|2019-12-13",
+"name": "FX:EUR",
+"start": "2019-12-13",
+"end": "2023-04-20",
+"legs": {
+"TW_EUR": 1.0
+},
+"sign": 1
+},
+{
+"id": "FX:EUR|2024-10-10",
+"name": "FX:EUR",
+"start": "2024-10-10",
+"end": "2025-07-17",
+"legs": {
+"TW_EUR": -1.0
+},
+"sign": -1
+},
+{
+"id": "FX:GBP|2019-12-13",
+"name": "FX:GBP",
+"start": "2019-12-13",
+"end": "2022-07-01",
+"legs": {
+"TW_GBP": 1.0
+},
+"sign": 1
+},
+{
+"id": "FX:GBP|2022-09-30",
+"name": "FX:GBP",
+"start": "2022-09-30",
+"end": "2023-04-20",
+"legs": {
+"TW_GBP": 1.0
+},
+"sign": 1
+},
+{
+"id": "FX:GBP|2024-10-10",
+"name": "FX:GBP",
+"start": "2024-10-10",
+"end": "2025-07-17",
+"legs": {
+"TW_GBP": -1.0
+},
+"sign": -1
+},
+{
+"id": "FX:CHF|2019-12-13",
+"name": "FX:CHF",
+"start": "2019-12-13",
+"end": "2022-07-01",
+"legs": {
+"TW_CHF": -1.0
+},
+"sign": -1
+},
+{
+"id": "FX:CHF|2024-07-11",
+"name": "FX:CHF",
+"start": "2024-07-11",
+"end": "2025-07-17",
+"legs": {
+"TW_CHF": 1.0
+},
+"sign": 1
+},
+{
+"id": "FX:JPY|2020-01-10",
+"name": "FX:JPY",
+"start": "2020-01-10",
+"end": "2022-04-02",
+"legs": {
+"TW_JPY": -1.0
+},
+"sign": -1
+},
+{
+"id": "FX:JPY|2022-05-10",
+"name": "FX:JPY",
+"start": "2022-05-10",
+"end": "2023-04-20",
+"legs": {
+"TW_JPY": 1.0
+},
+"sign": 1
+},
+{
+"id": "FX:JPY|2023-05-26",
+"name": "FX:JPY",
+"start": "2023-05-26",
+"end": "2025-08-04",
+"legs": {
+"TW_JPY": 1.0
+},
+"sign": 1
+},
+{
+"id": "FX:CAD|2020-01-17",
+"name": "FX:CAD",
+"start": "2020-01-17",
+"end": "2022-05-27",
+"legs": {
+"TW_CAD": 1.0
+},
+"sign": 1
+},
+{
+"id": "FX:CAD|2024-02-09",
+"name": "FX:CAD",
+"start": "2024-02-09",
+"end": "2025-07-17",
+"legs": {
+"TW_CAD": -1.0
+},
+"sign": -1
+},
+{
+"id": "FX:AUD|2020-01-17",
+"name": "FX:AUD",
+"start": "2020-01-17",
+"end": "2022-07-01",
+"legs": {
+"TW_AUD": 1.0
+},
+"sign": 1
+},
+{
+"id": "FX:AUD|2024-02-09",
+"name": "FX:AUD",
+"start": "2024-02-09",
+"end": "2025-07-17",
+"legs": {
+"TW_AUD": -1.0
+},
+"sign": -1
+},
+{
+"id": "FX:EM Currencies|2020-01-10",
+"name": "FX:EM Currencies",
+"start": "2020-01-10",
+"end": "2023-03-31",
+"legs": {
+"CEW": 1.0,
+"BIL": -1.0
+},
+"sign": 1
+},
+{
+"id": "FX:EM Currencies|2024-12-13",
+"name": "FX:EM Currencies",
+"start": "2024-12-13",
+"end": "2025-07-17",
+"legs": {
+"CEW": -1.0,
+"BIL": 1.0
+},
+"sign": -1
+},
+{
+"id": "CMD:Energy|2019-12-13",
+"name": "CMD:Energy",
+"start": "2019-12-13",
+"end": "2022-03-01",
+"legs": {
+"BZ=F": 1.0,
+"BIL": -1.0
+},
+"sign": 1
+},
+{
+"id": "CMD:Energy|2022-09-30",
+"name": "CMD:Energy",
+"start": "2022-09-30",
+"end": "2023-03-31",
+"legs": {
+"BZ=F": 1.0,
+"BIL": -1.0
+},
+"sign": 1
+},
+{
+"id": "CMD:Energy|2024-05-09",
+"name": "CMD:Energy",
+"start": "2024-05-09",
+"end": "2025-08-04",
+"legs": {
+"BZ=F": -1.0,
+"BIL": 1.0
+},
+"sign": -1
+},
+{
+"id": "CMD:Base/Bulk Metals|2020-01-10",
+"name": "CMD:Base/Bulk Metals",
+"start": "2020-01-10",
+"end": "2021-05-28",
+"legs": {
+"DBB": 1.0,
+"BIL": -1.0
+},
+"sign": 1
+},
+{
+"id": "CMD:Base/Bulk Metals|2021-09-17",
+"name": "CMD:Base/Bulk Metals",
+"start": "2021-09-17",
+"end": "2022-05-27",
+"legs": {
+"DBB": 1.0,
+"BIL": -1.0
+},
+"sign": 1
+},
+{
+"id": "CMD:Base/Bulk Metals|2022-09-30",
+"name": "CMD:Base/Bulk Metals",
+"start": "2022-09-30",
+"end": "2023-03-31",
+"legs": {
+"DBB": 1.0,
+"BIL": -1.0
+},
+"sign": 1
+},
+{
+"id": "CMD:Base/Bulk Metals|2024-02-09",
+"name": "CMD:Base/Bulk Metals",
+"start": "2024-02-09",
+"end": "2024-05-09",
+"legs": {
+"DBB": 1.0,
+"BIL": -1.0
+},
+"sign": 1
+},
+{
+"id": "CMD:Base/Bulk Metals|2024-07-11",
+"name": "CMD:Base/Bulk Metals",
+"start": "2024-07-11",
+"end": "2025-07-17",
+"legs": {
+"DBB": -1.0,
+"BIL": 1.0
+},
+"sign": -1
+},
+{
+"id": "CMD:Gold|2020-03-28",
+"name": "CMD:Gold",
+"start": "2020-03-28",
+"end": "2021-10-01",
+"legs": {
+"GLD": 1.0,
+"BIL": -1.0
+},
+"sign": 1
+},
+{
+"id": "CMD:Gold|2023-03-31",
+"name": "CMD:Gold",
+"start": "2023-03-31",
+"end": "2024-02-09",
+"legs": {
+"GLD": -1.0,
+"BIL": 1.0
+},
+"sign": -1
+},
+{
+"id": "CMD:Gold|2024-09-13",
+"name": "CMD:Gold",
+"start": "2024-09-13",
+"end": "2025-08-04",
+"legs": {
+"GLD": 1.0,
+"BIL": -1.0
+},
+"sign": 1
+},
+{
+"id": "SEC:Consumer Discretionary|2024-02-09",
+"name": "SEC:Consumer Discretionary",
+"start": "2024-02-09",
+"end": "2025-08-04",
+"legs": {
+"RXI": -1.0,
+"ACWI": 1.0
+},
+"sign": -1
+},
+{
+"id": "SEC:Consumer Staples|2024-02-09",
+"name": "SEC:Consumer Staples",
+"start": "2024-02-09",
+"end": "2025-08-04",
+"legs": {
+"KXI": 1.0,
+"ACWI": -1.0
+},
+"sign": 1
+},
+{
+"id": "SEC:Energy|2025-04-10",
+"name": "SEC:Energy",
+"start": "2025-04-10",
+"end": "2025-06-26",
+"legs": {
+"IXC": -1.0,
+"ACWI": 1.0
+},
+"sign": -1
+},
+{
+"id": "SEC:Financials|2024-10-10",
+"name": "SEC:Financials",
+"start": "2024-10-10",
+"end": "2025-04-10",
+"legs": {
+"IXG": -1.0,
+"ACWI": 1.0
+},
+"sign": -1
+},
+{
+"id": "SEC:Financials|2025-06-26",
+"name": "SEC:Financials",
+"start": "2025-06-26",
+"end": "2025-08-04",
+"legs": {
+"IXG": -1.0,
+"ACWI": 1.0
+},
+"sign": -1
+},
+{
+"id": "SEC:Health Care|2024-02-09",
+"name": "SEC:Health Care",
+"start": "2024-02-09",
+"end": "2025-08-04",
+"legs": {
+"IXJ": 1.0,
+"ACWI": -1.0
+},
+"sign": 1
+},
+{
+"id": "SEC:Industrials|2024-12-13",
+"name": "SEC:Industrials",
+"start": "2024-12-13",
+"end": "2025-08-04",
+"legs": {
+"EXI": -1.0,
+"ACWI": 1.0
+},
+"sign": -1
+},
+{
+"id": "SEC:Information Technology|2024-06-14",
+"name": "SEC:Information Technology",
+"start": "2024-06-14",
+"end": "2024-12-13",
+"legs": {
+"IXN": -1.0,
+"ACWI": 1.0
+},
+"sign": -1
+},
+{
+"id": "SEC:Materials|2024-12-13",
+"name": "SEC:Materials",
+"start": "2024-12-13",
+"end": "2025-08-04",
+"legs": {
+"MXI": -1.0,
+"ACWI": 1.0
+},
+"sign": -1
+},
+{
+"id": "SEC:Real Estate|2024-02-09",
+"name": "SEC:Real Estate",
+"start": "2024-02-09",
+"end": "2025-08-04",
+"legs": {
+"REET": -1.0,
+"ACWI": 1.0
+},
+"sign": -1
+},
+{
+"id": "SEC:Utilities|2024-05-24",
+"name": "SEC:Utilities",
+"start": "2024-05-24",
+"end": "2025-08-04",
+"legs": {
+"JXI": 1.0,
+"ACWI": -1.0
+},
+"sign": 1
+}
+]

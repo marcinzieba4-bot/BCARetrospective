@@ -219,10 +219,161 @@ moved each year. It's useful as a list of risks. It doesn't work as a timing too
    −5% or −10%, and returns coming from a few fat-tail winners. Most of the edge was in 2015–17.
 7. **Track them yourself.** The FullView table is their only live scorecard; check it in each report. Ask
    BCA for the matrix scorecard they promised in April 2020.
+8. **Don't act on a GIS "value" call when it's published. Wait until the price confirms it** (see §5). On
+   GIS's own conviction calls, the same views went from −5.9%/yr to +3.4%/yr this way.
 
 ---
 
-## 5. Method, assumptions and caveats
+## 5. Execution overlay on GIS's conviction ("inevitable value") calls
+
+**Question.** GIS's highest-conviction calls usually rest on valuation: "cheap", "X% below PPP", "an
+irresistible valuation tailwind". Can a simple execution rule turn those views into a better strategy?
+The rule: enter only after the price confirms, then use a stop-loss, then re-enter.
+
+### 5.1 The call universe (fixed before any backtest; `data/value_calls.json`)
+
+GIS never uses the word "inevitable" for its investment calls; it reserves it for macro events like
+recessions or the US–China conflict. So the universe is defined objectively as GIS's **highest-conviction
+calls**: 24 in total, Feb 2015 → Aug 2025.
+
+* **Valuation-justified trades (V1–V9).** Each one's rationale is confirmed in GIS's own text:
+
+  | Call | Period | GIS rationale |
+  |---|---|---|
+  | Short US / long Euro Area + Japan + China | 2015–17 | |
+  | Long Europe & Japan / short US | 2017–18 | |
+  | Long China H-shares / short EM | 2017–20 | *"a substantial discount"* |
+  | Long value / short growth | 2018–20 and 2020–23 | |
+  | Long non-US / short US | 2019–24 | *"an increasingly irresistible valuation tailwind"* |
+  | Long small caps | 2022–23 | *"relatively cheap"* |
+  | Long China | 2022 | |
+  | Long EUR | 2022–23 | *"26% undervalued based on PPP"* |
+  | Long JPY | 2022–25 | *"extremely cheap … 40% below PPP"* |
+
+* **Every strongest 12-month View Matrix rating (1 or 5)** (M1–M11):
+  * Euro Area equities, GBP, energy
+  * EM equities, EM FX, CAD
+  * Health care, utilities, staples
+  * Short real estate
+* **Every strongest 10-year ("secular value") rating** (S1–S5):
+  * Short bonds/duration
+  * Long inflation protection
+  * Gold, base metals
+  * EM equities (merged with the 12-month EM call)
+
+Instruments:
+* Pairs are long/short total-return ETFs. Currency-hedged legs use HEZU and HEWJ.
+* Outright positions are measured as excess return over T-bills.
+* JPY includes the negative carry.
+
+Each call runs from GIS's start date to the date GIS dropped or changed it. Positions are sized to 5%
+annual volatility at each entry.
+
+### 5.2 Rules tested
+
+| | Strategy | Entry | Exit | Re-entry |
+|---|---|---|---|---|
+| A | **Naive**: follow GIS | On the call date | When GIS ends the call | – |
+| B | BCA-style stop | On the call date | 5% stop | Never |
+| C | **Your rule**: 1-month confirmation + stop + re-entry | Month-end close where the position gained over that month | 5% stop (daily close) or call end | Next month-end with a positive month |
+| D | **Improved**: 6-month confirmation + trailing stop + re-entry | Month-end where the position gained over the last 6 months | Position falls 3% below its peak since entry, or call end | Next month-end with positive 6-month momentum |
+| E | Monthly trend filter | In while the 6-month return is positive | Out when it turns negative | Monthly |
+
+Decisions are made at a close and applied from the next day, so there is no look-ahead.
+
+### 5.3 Results: portfolio of all 24 calls, Feb 2015 → Aug 2025
+
+![Equity curves](charts/5_overlay_equity_curves.png)
+
+| Strategy | CAGR | Vol | Sharpe | Max DD | Entries | Winning entries |
+|---|---|---|---|---|---|---|
+| A. Naive: follow GIS's conviction calls | **−5.9%** | 16.7% | −0.35 | **−62%** | 24 | 42% |
+| B. BCA-style 5% stop, no re-entry | −5.6% | 6.1% | −0.92 | −49% | 24 | 17% |
+| C. Your rule: 1m confirm + 5% stop + re-entry | −5.0% | 9.8% | −0.51 | −47% | 50 | 22% |
+| **D. 6m confirm + 3% trailing stop + re-entry** | **+3.4%** | 7.4% | **+0.46** | **−19%** | 95 | 40% |
+| E. Monthly trend filter (6m) | +1.7% | 8.7% | +0.20 | −25% | 44 | 39% |
+
+Calendar years, % of capital:
+
+| | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025* |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| A. Naive | −1.3 | −3.4 | −0.8 | −4.5 | −9.0 | **−23.8** | −12.8 | +36.3 | −12.2 | −19.2 | −0.5 |
+| D. 6m confirm + 3% trail | +0.1 | −0.9 | +4.0 | +1.7 | −1.9 | **+8.7** | +19.0 | +27.5 | −4.8 | −8.0 | −4.1 |
+
+\*2025 runs to Aug.
+
+**What this shows:**
+* **Followed as published, GIS's conviction "value" calls lost money.** Most were value traps: cheap
+  assets that kept getting cheaper for years. Non-US vs US lost 33%, EM vs world 20%, value vs growth 18%,
+  health care 16%, the yen 9%.
+* **Your 1-month rule (C) barely helps.** One good month is too noisy a signal. The rule keeps
+  re-entering persistent losers: non-US vs US was entered nine times.
+* **Waiting for 6 months of confirmation (D) is what works.** It sits out the long "value trap" phases and
+  catches the trends once they start, as chart 8 shows. Examples: shorting bonds only from late 2020, and
+  the 2021–22 value, commodity and inflation trades.
+* **It is still a trend-following payoff.** Only 40% of entries win; there are many small stop-outs and a
+  few big trends. **The profit is concentrated in 2020–22.** In 2023–25 rule D lost money too, though much
+  less than naive. A trending macro regime is what makes it work.
+
+![Mechanics](charts/8_overlay_mechanics.png)
+
+### 5.4 Per call
+
+![Per call](charts/6_overlay_per_call.png)
+
+**Where D helps most:**
+* Non-US vs US: −33% → −11%
+* EM: −20% → −5%
+* Value vs growth (2018–20): −18% → −4%
+* Health care: −16% → −2%
+* Short bonds: +6% → +16%
+* Europe/Japan vs US: −4% → +5%
+
+**Where D hurts:**
+* The yen: −9% → −16%, whipsawed by sharp short-covering rallies
+* Gold and base metals: give up part of the trend, +22% → +9% and +21% → +7%
+* Utilities: −0% → −9%
+
+### 5.5 Robustness: is D just the best cell of the grid?
+
+D was chosen *after* looking at the grid, so the checks below matter. The grid covers 66 configurations:
+confirmation look-back of 1, 3 or 6 months × threshold of 0% or 2% × stop of 3–15% (fixed or trailing),
+plus the trend filter.
+
+![Grid](charts/7_overlay_grid.png)
+
+* **All 66 configurations beat naive holding.** 53% of them have a positive CAGR.
+* **Look-back is the main driver, and the pattern is monotonic.** Median CAGR is −2.6% (1 month), −0.1%
+  (3 months) and **+1.9% (6 months)**. Tighter stops work better than wide ones.
+* **Time split.** The same 6-month rule improves both halves of the sample:
+
+  | Calls started | Naive CAGR | 6m rule CAGR (5% trailing stop) | Naive max DD | 6m rule max DD |
+  |---|---|---|---|---|
+  | 2015–19 | −7.1% | −1.1% | −51% | −14% |
+  | 2020–25 | +0.8% | **+6.6%** (Sharpe 0.63) | | |
+
+* **Broader test: all 66 twelve-month View Matrix call windows, 2019–25** (it partly overlaps the 24
+  conviction calls). The overlay improves
+  all of them as well.
+  * With equal 5% notional per call: Sharpe rises from 0.14 to **0.42–0.49** and max drawdown halves
+    (−12.5% → −5–7%).
+  * With vol-targeted sizing: −7.8% → between −1.9% and +1.4% CAGR.
+  * Here even the 1-month rule works (Sharpe 0.49), so the *exact* look-back matters less than *having
+    a confirmation rule at all*.
+
+**How to use this.** Treat a new GIS conviction or "cheap asset" call as a **watchlist entry, not a trade**:
+1. Buy only once the position shows a positive 6-month return at a month-end close.
+2. Protect it with a tight trailing stop, about 3% from the peak on the position.
+3. Re-enter on the next positive 6-month reading while GIS still holds the view.
+4. Exit when GIS drops the view.
+
+Expect about 40% winning entries, and expect the strategy to do best in trending macro regimes. Even with
+this filter, GIS's equity-region calls (non-US, EM) still lost money; the overlay just made the losses
+smaller.
+
+---
+
+## 6. Method, assumptions and caveats
 
 * **Small sample.** The matrix test covers 5.6 years. Weekly observations overlap heavily, so there are
   only about 5–6 independent 12-month windows per asset. A few regimes dominate the results (2022 rates,
@@ -253,7 +404,7 @@ moved each year. It's useful as a list of risks. It doesn't work as a timing too
 
 ---
 
-## 6. Reproducing
+## 7. Reproducing
 
 ```bash
 pip install -r requirements.txt
@@ -277,6 +428,11 @@ python scripts/vm_timeline.py && python scripts/build_trades.py
 python scripts/trade_stats.py && python scripts/trade_portfolio.py && python scripts/verify.py
 python scripts/vm_eval.py && python scripts/vm_portfolio.py
 python scripts/recession_calls.py && python scripts/charts.py
+# Section 5: execution overlay on conviction calls (data/value_calls.json is the pre-registered universe)
+python scripts/overlay_report.py                         # strategies A-E on the 24 conviction calls
+python scripts/overlay_grid.py data/value_calls.json data/overlay_grid.csv   # 66-config robustness grid
+python scripts/overlay_matrix.py                         # same rules on all 12m matrix calls (needs data/matrix_calls_12m.json)
+python scripts/overlay_charts.py
 ```
 
 ### Data files (`data/`)
@@ -292,3 +448,8 @@ python scripts/recession_calls.py && python scripts/charts.py
 | `vm_portfolio_curves.csv` | Daily returns of the matrix-based portfolios |
 | `recession_calls.csv` | 87 dated recession-timing statements and the implied start date |
 | `report_index.json` | All 445 reports: date, slug, which PDF pages hold trade tables |
+| `value_calls.json` | The 24 conviction ("inevitable value") calls: dates, legs, rationale |
+| `matrix_calls_12m.json` | All 66 non-neutral 12-month matrix call windows (out-of-universe test) |
+| `overlay_summary.csv`, `overlay_value_daily.csv` | Strategies A–E: statistics and daily portfolio returns |
+| `overlay_per_call.csv`, `overlay_per_call_table.csv`, `overlay_trades.csv` | Per-call results and every simulated entry/exit |
+| `overlay_grid.csv`, `overlay_matrix_results.csv` | Robustness grid and broad-matrix results |

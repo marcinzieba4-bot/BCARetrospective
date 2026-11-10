@@ -1,0 +1,6 @@
+key,strategy,cum_pct,cagr_pct,vol_pct,sharpe,maxdd_pct,calmar,entries,entry_hit_rate
+A,Naive: hold each call,-47.44,-5.9,16.71,-0.35,-61.58,-0.1,24,41.7
+B,"BCA-style: 5% stop, no re-entry",-45.86,-5.63,6.13,-0.92,-49.08,-0.11,24,16.7
+C,Your rule: 1-month confirm + 5% stop + re-entry,-41.89,-5.0,9.84,-0.51,-47.39,-0.11,50,22.0
+D,Improved: 6-month confirm + 3% trailing stop + re-entry,42.79,3.42,7.37,0.46,-19.39,0.18,95,40.0
+E,Monthly trend filter (6-month),19.97,1.74,8.73,0.2,-25.13,0.07,44,38.6

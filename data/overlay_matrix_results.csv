@@ -1,0 +1,11 @@
+sizing,config,cagr,vol,sharpe,maxdd,calls_positive
+equal 5% notional,naive (hold each call),0.59,4.3,0.14,-12.5,53%
+equal 5% notional,pre-registered: 1m confirm + 5% stop + re-entry,1.62,3.3,0.49,-6.3,50%
+equal 5% notional,6m confirm + 5% stop + re-entry,1.17,2.7,0.43,-5.3,45%
+equal 5% notional,6m confirm + 3% trailing stop + re-entry,0.77,1.8,0.42,-5.9,44%
+equal 5% notional,monthly trend filter (6m),0.97,2.3,0.42,-6.8,45%
+2% vol target per call,naive (hold each call),-7.79,24.7,-0.31,-57.5,53%
+2% vol target per call,pre-registered: 1m confirm + 5% stop + re-entry,-1.89,12.3,-0.15,-31.5,50%
+2% vol target per call,6m confirm + 5% stop + re-entry,-0.95,11.9,-0.08,-24.9,45%
+2% vol target per call,6m confirm + 3% trailing stop + re-entry,1.38,9.3,0.15,-21.2,44%
+2% vol target per call,monthly trend filter (6m),0.59,9.6,0.06,-28.1,45%

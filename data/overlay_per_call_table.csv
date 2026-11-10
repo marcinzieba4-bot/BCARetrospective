@@ -1,0 +1,25 @@
+id,name,A,B,C,D,E
+V1,Short US / Long Euro Area+Japan+China equities (hedged),-10.7,-5.6,-11.9,-3.8,-2.2
+V2,Long Europe & Japan / Short US equities,-3.7,-5.3,-7.3,4.9,4.9
+V3,Long China H-shares / Short EM,7.7,-5.3,4.4,9.5,7.2
+V4a,Long Value / Short Growth (global),-18.2,-5.0,-14.5,-4.4,-7.2
+V4b,Long Value / Short Growth (re-initiated),12.1,-5.5,6.1,17.2,6.6
+V5,Long non-US / Short US equities,-33.4,-5.0,-39.2,-10.6,-14.2
+V6,Long small caps / Short S&P 500,-6.5,-5.7,-5.6,0.2,-3.1
+V7,Long Chinese equities (MCHI),-7.0,-5.3,-5.4,0.0,0.0
+V8,Long EUR / Short USD,9.4,9.4,7.6,3.4,3.3
+V9,"Long JPY / Short USD (yen ""extremely cheap"")",-9.3,-5.4,-8.6,-16.0,-20.8
+M1,Strong OW Euro Area equities,-7.4,-5.2,-7.5,0.0,0.0
+M2,Strong OW GBP (trade-weighted),-5.3,-5.6,-7.7,-2.2,-2.0
+M3,Strong OW energy (Brent),16.3,16.3,18.4,16.3,18.4
+M5,Strong OW EM currencies,-6.5,-5.2,-2.6,0.0,0.0
+M6,Strong OW CAD (trade-weighted),0.9,0.9,-0.5,-0.5,-1.1
+M8,Strong OW health care,-15.7,-5.2,-5.2,-1.8,-5.2
+M9,Strong UW real estate,5.2,-5.3,0.1,-0.7,-3.0
+M10,Strong OW utilities,-0.3,-0.3,-3.5,-9.0,-3.5
+M11,Strong OW consumer staples,-9.9,-5.5,-10.6,-8.5,-9.9
+M4,Strong OW EM equities (10y & 12m),-20.4,-5.1,-21.1,-5.0,-6.5
+S1,Secular strong UW bonds/duration,5.5,-5.1,16.2,16.4,11.1
+S2,Secular strong OW inflation protection,14.4,-6.3,20.9,15.5,15.5
+S4,Secular strong OW gold,22.2,-6.2,7.0,9.3,3.3
+S5,Secular strong OW base metals,21.2,21.2,14.7,7.1,16.7

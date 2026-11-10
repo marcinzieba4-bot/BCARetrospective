@@ -1,0 +1,293 @@
+[
+ {
+  "id": "V1",
+  "name": "Short US / Long Euro Area+Japan+China equities (hedged)",
+  "src": "Strategic trade",
+  "why": "US equities expensive vs. other regions (GIS, Mar-2016 review)",
+  "start": "2015-02-06",
+  "end": "2017-02-23",
+  "legs": {
+   "HEZU": 0.3333333333333333,
+   "HEWJ": 0.3333333333333333,
+   "FXI": 0.3333333333333333,
+   "SPY": -1
+  }
+ },
+ {
+  "id": "V2",
+  "name": "Long Europe & Japan / Short US equities",
+  "src": "Strategic trade",
+  "why": "Relative valuation (continuation of V1)",
+  "start": "2017-02-23",
+  "end": "2018-06-19",
+  "legs": {
+   "HEZU": 0.5,
+   "HEWJ": 0.5,
+   "SPY": -1
+  }
+ },
+ {
+  "id": "V3",
+  "name": "Long China H-shares / Short EM",
+  "src": "Strategic trade",
+  "why": "\"H-shares now trade at a substantial discount to the EM index\"",
+  "start": "2017-02-23",
+  "end": "2020-03-27",
+  "legs": {
+   "FXI": 1,
+   "EEM": -1
+  }
+ },
+ {
+  "id": "V4a",
+  "name": "Long Value / Short Growth (global)",
+  "src": "Strategic trade",
+  "why": "\"favor ... value over growth\"",
+  "start": "2018-03-29",
+  "end": "2020-03-27",
+  "legs": {
+   "IVE": 0.5,
+   "EFV": 0.5,
+   "IVW": -0.5,
+   "EFG": -0.5
+  }
+ },
+ {
+  "id": "V4b",
+  "name": "Long Value / Short Growth (re-initiated)",
+  "src": "Special trade",
+  "why": "Value/growth valuation gap",
+  "start": "2020-12-10",
+  "end": "2023-03-31",
+  "legs": {
+   "IVE": 0.5,
+   "EFV": 0.5,
+   "IVW": -0.5,
+   "EFG": -0.5
+  }
+ },
+ {
+  "id": "V5",
+  "name": "Long non-US / Short US equities",
+  "src": "Strategic trade + 12m matrix UW US",
+  "why": "\"an increasingly irresistible valuation tailwind\" for non-US stocks",
+  "start": "2019-11-14",
+  "end": "2024-02-09",
+  "legs": {
+   "ACWX": 1,
+   "SPY": -1
+  }
+ },
+ {
+  "id": "V6",
+  "name": "Long small caps / Short S&P 500",
+  "src": "Special trade",
+  "why": "\"small caps are starting to look relatively cheap\"",
+  "start": "2022-04-21",
+  "end": "2023-05-05",
+  "legs": {
+   "IJR": 1,
+   "SPY": -1
+  }
+ },
+ {
+  "id": "V7",
+  "name": "Long Chinese equities (MCHI)",
+  "src": "Special trade",
+  "why": "\"Chinese stocks are relatively cheap ... woes fully discounted\"",
+  "start": "2022-06-02",
+  "end": "2022-08-02",
+  "legs": {
+   "MCHI": 1,
+   "BIL": -1
+  }
+ },
+ {
+  "id": "V8",
+  "name": "Long EUR / Short USD",
+  "src": "Special trade",
+  "why": "\"The euro is 26% undervalued against the dollar based on PPP\"",
+  "start": "2022-07-14",
+  "end": "2023-02-17",
+  "legs": {
+   "EURUSD=X": 1
+  }
+ },
+ {
+  "id": "V9",
+  "name": "Long JPY / Short USD (yen \"extremely cheap\")",
+  "src": "Special trades + 12m matrix JPY=5",
+  "why": "\"The yen is extremely cheap ... 40% below PPP\"",
+  "start": "2022-06-30",
+  "end": "2025-08-04",
+  "legs": {
+   "JPYLONG": 1
+  }
+ },
+ {
+  "id": "M1",
+  "name": "Strong OW Euro Area equities",
+  "src": "12m matrix EQ:Euro Area=5",
+  "why": "Strongest 12-month conviction",
+  "start": "2020-01-10",
+  "end": "2020-04-09",
+  "legs": {
+   "EZU": 1,
+   "ACWI": -1
+  }
+ },
+ {
+  "id": "M2",
+  "name": "Strong OW GBP (trade-weighted)",
+  "src": "12m matrix FX:GBP=5",
+  "why": "Strongest 12-month conviction",
+  "start": "2019-12-13",
+  "end": "2020-04-09",
+  "legs": {
+   "TW_GBP": 1
+  }
+ },
+ {
+  "id": "M3",
+  "name": "Strong OW energy (Brent)",
+  "src": "12m matrix CMD:Energy=5",
+  "why": "Strongest 12-month conviction",
+  "start": "2021-01-08",
+  "end": "2021-03-19",
+  "legs": {
+   "BNO": 1,
+   "BIL": -1
+  }
+ },
+ {
+  "id": "M5",
+  "name": "Strong OW EM currencies",
+  "src": "12m matrix FX:EM Currencies=5",
+  "why": "Strongest 12-month conviction",
+  "start": "2021-09-17",
+  "end": "2022-05-10",
+  "legs": {
+   "CEW": 1,
+   "BIL": -1
+  }
+ },
+ {
+  "id": "M6",
+  "name": "Strong OW CAD (trade-weighted)",
+  "src": "12m matrix FX:CAD=5",
+  "why": "Strongest 12-month conviction",
+  "start": "2021-10-01",
+  "end": "2022-03-01",
+  "legs": {
+   "TW_CAD": 1
+  }
+ },
+ {
+  "id": "M8",
+  "name": "Strong OW health care",
+  "src": "12m matrix SEC:Health Care=5",
+  "why": "Strongest 12-month conviction",
+  "start": "2024-02-09",
+  "end": "2024-12-13",
+  "legs": {
+   "IXJ": 1,
+   "ACWI": -1
+  }
+ },
+ {
+  "id": "M9",
+  "name": "Strong UW real estate",
+  "src": "12m matrix SEC:Real Estate=1",
+  "why": "Strongest 12-month conviction",
+  "start": "2024-02-09",
+  "end": "2024-12-13",
+  "legs": {
+   "REET": -1,
+   "ACWI": 1
+  }
+ },
+ {
+  "id": "M10",
+  "name": "Strong OW utilities",
+  "src": "12m matrix SEC:Utilities=5",
+  "why": "Strongest 12-month conviction",
+  "start": "2024-07-11",
+  "end": "2024-12-13",
+  "legs": {
+   "JXI": 1,
+   "ACWI": -1
+  }
+ },
+ {
+  "id": "M11",
+  "name": "Strong OW consumer staples",
+  "src": "12m matrix SEC:Consumer Staples=5",
+  "why": "Strongest 12-month conviction",
+  "start": "2024-06-14",
+  "end": "2025-08-04",
+  "legs": {
+   "KXI": 1,
+   "ACWI": -1
+  }
+ },
+ {
+  "id": "M4",
+  "name": "Strong OW EM equities (10y & 12m)",
+  "src": "10y+12m matrix EQ:EM=5",
+  "why": "Secular value + cyclical conviction",
+  "start": "2020-01-10",
+  "end": "2022-05-10",
+  "legs": {
+   "EEM": 1,
+   "ACWI": -1
+  }
+ },
+ {
+  "id": "S1",
+  "name": "Secular strong UW bonds/duration",
+  "src": "10y matrix FI:Duration=1",
+  "why": "Strongest 10-year (valuation) conviction",
+  "start": "2020-01-17",
+  "end": "2022-05-10",
+  "legs": {
+   "IEF": -1,
+   "BIL": 1
+  }
+ },
+ {
+  "id": "S2",
+  "name": "Secular strong OW inflation protection",
+  "src": "10y matrix FI:Inflation Protection=5",
+  "why": "Strongest 10-year (valuation) conviction",
+  "start": "2020-01-17",
+  "end": "2022-05-10",
+  "legs": {
+   "TIP": 1,
+   "IEF": -1
+  }
+ },
+ {
+  "id": "S4",
+  "name": "Secular strong OW gold",
+  "src": "10y matrix CMD:Gold=5",
+  "why": "Strongest 10-year (valuation) conviction",
+  "start": "2020-01-17",
+  "end": "2022-04-02",
+  "legs": {
+   "GLD": 1,
+   "BIL": -1
+  }
+ },
+ {
+  "id": "S5",
+  "name": "Secular strong OW base metals",
+  "src": "10y matrix CMD:Base/Bulk Metals=5",
+  "why": "Strongest 10-year (valuation) conviction",
+  "start": "2021-03-19",
+  "end": "2022-05-27",
+  "legs": {
+   "DBB": 1,
+   "BIL": -1
+  }
+ }
+]
